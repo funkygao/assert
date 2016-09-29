@@ -1,12 +1,13 @@
+// Package assert is a clone of XXUnit's assert feature that
+// is missing in standard golang package.
 package assert
-// Testing helpers for doozer.
 
 import (
+	"fmt"
 	"github.com/kr/pretty"
 	"reflect"
-	"testing"
 	"runtime"
-	"fmt"
+	"testing"
 )
 
 func assert(t *testing.T, result bool, f func(), cd int) {
